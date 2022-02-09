@@ -44,7 +44,7 @@ sudo pacman -Syu asusctl linux-g14	linux-g14-headers supergfxctl && sudo systemc
 
 MAKEFLAGS="-j$(nproc)"
 
-yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg
+yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg && reboot
 
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin && sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3
 
@@ -54,11 +54,11 @@ sudo pacman -Syu ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils
 
 for microphone not detected	https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Microphone_not_detected_by_PulseAudio
 
-#To run games on Linux
+# To run games on Linux
 sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cabextract fluidsynth giflib gnutls gst-plugins-bad gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly jq lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-openal lib32-opencl-icd-loader lib32-sdl2 lib32-v4l-utils libgphoto2 libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt mono mpg123 openal opencl-icd-loader sdl2 v4l-utils winetricks wine-mono samba && yay -S dxvk-bin vkd3d-proton-bin rum-bin
 
-#Blender and UnityHub
+# Blender and UnityHub
 sudo pacman -S blender && yay -S unityhub
 
-#Steam
+# Steam
 sudo pacman -S lutris steam ttf-liberation wqy-zenhei
