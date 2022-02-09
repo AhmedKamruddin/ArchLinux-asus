@@ -46,3 +46,5 @@ MAKEFLAGS="-j$(nproc)"
 
 yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg
 
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin && sudo pacman -Syu libreoffice torbrowser-launcher
+
