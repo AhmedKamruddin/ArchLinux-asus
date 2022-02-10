@@ -1,0 +1,155 @@
+Hello
+World
+base
+base-devel
+linux  
+linux-firmware    
+vim  
+sudo  
+grub  
+edibootmgr  
+os-prober  
+networkmanager  
+wireless_tools  
+netctl  
+dialog  
+terminus-font  
+xorg  
+xorg-xinit  
+i3  
+archlinux-keyring  
+gnome  
+gnome-tweaks  
+gdm  
+firefox  
+base-devel  
+make  
+git  
+mpv  
+pulseaudio-bluetooth  
+bluez-utils  
+
+standardnotes-bin(yay)  
+
+amdgpu
+  mesa
+  lib32-mesa
+  vulkan-radeon
+  lib32-vulkan-radeon
+  f86-video-amdgpu
+
+nvidiagpu:
+  nvidia-470xx-dkms
+  nvidia-470xx-utils
+  opencl-nvidia-470xx
+  lib32-nvidia-470xx-utils
+  lib32-opencl-nvidia-470xx
+
+asusctl:
+  asusctl
+  linux-g14
+  linux-g14-headers
+  supergfxctl
+
+linux-xanmod-rog (git)
+linux-xanmod-rog-headers (git)
+
+freetube-bin (git)
+bitwarden
+jdownloader2 (git)
+protonvpn (git)
+libreoffice
+visual-studio-code-bin
+torbrowser-launcher
+nextcloud (store)
+
+for software not working
+	gnome-software-packagekit-plugin
+
+gnucash
+kdeconnect
+ufw
+qbittorrent
+simplescreenrecorder
+grub-customizer
+zoom(git)
+variety
+
+for microphone not detected
+  alsa-utils
+  https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Microphone_not_detected_by_PulseAudio
+
+for linux native games
+  wine-staging
+  alsa-plugins 
+  cabextract 
+  fluidsynth
+  gst-plugins-bad  
+  gst-plugins-good 
+  gst-plugins-ugly 
+  jq 
+  lib32-alsa-lib 
+  lib32-alsa-plugins 
+  lib32-giflib 
+  lib32-gnutls 
+  lib32-gst-plugins-base-libs 
+  lib32-libpulse 
+  lib32-libxcomposite 
+  lib32-libxinerama 
+  lib32-libxslt 
+  lib32-mpg123 
+  lib32-openal 
+  lib32-opencl-icd-loader 
+  ilb32-v4l-utils 
+  libgphoto2 
+  libjpeg-turbo 
+  mono 
+  mpg123 
+  opencl-icd-loader 
+  winetricks
+  dxvk-bin (git)
+  vkd3d-proton-bin (git)
+  wine-mono
+  samba
+  rum-bin (git)
+
+unityhub (git)
+blender
+lutris
+for steam
+  ttf-liberation
+  steam
+pacman -S $(pacman -Ssq gnome-icon-theme)
+touchegg (git)
+
+
+for appimages
+	fuse2
+
+python
+spectacle
+droidcam
+net-tools
+dnsutils
+traceroute
+gimp
+
+for gns3
+  gns3-gui(git)
+  gns3-server(git)
+  dynamips(git)
+  libvirt
+  dnsmasq
+  ubridge(git)
+  qemu
+  vpcs(git)
+  wireshark-qt
+
+
+==> WARNING: Possibly missing firmware for module: qla2xxx
+==> WARNING: Possibly missing firmware for module: wd719x
+==> WARNING: Possibly missing firmware for module: qed
+==> WARNING: Possibly missing firmware for module: bfa
+==> WARNING: Possibly missing firmware for module: aic94xx
+==> WARNING: Possibly missing firmware for module: qla1280
+==> WARNING: Possibly missing firmware for module: xhci_pci
