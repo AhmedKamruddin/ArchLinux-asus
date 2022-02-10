@@ -13,25 +13,26 @@
       sudo pacman -Syu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon xf86-video-amdgpu 
 
 - ## Nvidia
-        sudo pacman -Syu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook
 
-[Trigger]  
-Operation=Install  
-Operation=Upgrade  
-Operation=Remove  
-Type=Package  
-Target=nvidia  
-Target=linux  
-#Change the linux part above and in the Exec line if a different kernel is used  
+      sudo pacman -Syu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook  
+       
+     [Trigger]  
+      Operation=Install  
+      Operation=Upgrade  
+      Operation=Remove  
+      Type=Package  
+      Target=nvidia  
+      Target=linux  
+      #Change the linux part above and in the Exec line if a different kernel is used  
 
-[Action]  
-Description=Update Nvidia module in initcpio  
-Depends=mkinitcpio  
-When=PostTransaction  
-NeedsTargets  
-Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'  
+     [Action]  
+      Description=Update Nvidia module in initcpio  
+      Depends=mkinitcpio  
+      When=PostTransaction  
+      NeedsTargets  
+      Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'  
 
-    reboot
+      reboot
 
 # asus-linux
 Add g14 repository 
