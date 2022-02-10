@@ -1,5 +1,3 @@
-Hello
-World
 base
 base-devel
 linux  
@@ -21,8 +19,7 @@ archlinux-keyring
 gnome  
 gnome-tweaks  
 gdm  
-firefox  
-base-devel  
+firefox
 make  
 git  
 mpv  
