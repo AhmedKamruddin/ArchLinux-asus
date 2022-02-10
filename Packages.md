@@ -1,7 +1,7 @@
 # Arch-Install
 My personal arch linux setup
 
-sudo systemctl enable --now bluetooth && sudo vim /etc/pacman.conf && sudo pacman -Syu base-devel make git && cd && rm -rf yay && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay && sudo pacman -S firefox mpv bluez-utils && yay -S standardnotes-bin && sudo pacman -S mesa lib32-mesa	vulkan-radeon	lib32-vulkan-radeon	xf86-video-amdgpu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook
+sudo systemctl enable --now bluetooth && sudo vim /etc/pacman.conf && sudo pacman -Syu base-devel make git $(pacman -Ssq gnome-icon-theme) && cd && rm -rf yay && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay && sudo pacman -S firefox mpv bluez-utils && yay -S standardnotes-bin && sudo pacman -S mesa lib32-mesa	vulkan-radeon	lib32-vulkan-radeon	xf86-video-amdgpu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook
 
 [Trigger]
 
