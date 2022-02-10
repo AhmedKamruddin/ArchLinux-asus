@@ -46,7 +46,7 @@ MAKEFLAGS="-j$(nproc)"
 
 yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg && reboot
 
-yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin && sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect  
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin && sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety
 
 nextcloud(software store)
 
