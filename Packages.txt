@@ -26,7 +26,7 @@ SigLevel = DatabaseNever Optional TrustAll
 Server = https://arch.asus-linux.org
 
 
-sudo pacman -Syu asusctl linux-g14	linux-g14-headers supergfxctl && sudo systemctl enable --now power-profiles-daemon.service && sudo systemctl enable --now supergfxd && sudo vim /etc/makepkg.conf
+sudo pacman -Syu asusctl linux-g14 linux-g14-headers supergfxctl && sudo systemctl enable --now power-profiles-daemon.service && sudo systemctl enable --now supergfxd && sudo vim /etc/makepkg.conf
 MAKEFLAGS="-j$(nproc)"
 
 yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg && reboot
