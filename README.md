@@ -1,5 +1,5 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-[Arch Installation]("Arch Installation.md")  
+[Arch Installation](ArchInstallation.md)  
 [Software](#software)
 
 # Post-installation
