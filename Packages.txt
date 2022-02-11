@@ -85,6 +85,7 @@ standardnotes-bin
 unityhub
 touchegg
 i3-gnome
+gnome-shell-extension-pop-shell-git
 
 SOFTWARE STORE:
 nextcloud (store)
