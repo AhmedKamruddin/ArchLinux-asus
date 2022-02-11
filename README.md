@@ -112,6 +112,8 @@ MAKEFLAGS="-j$(nproc)"
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Software
+
+[List of packages](Packages.txt)  
 ```
 sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils blender ntfs-3g gparted
 ```
