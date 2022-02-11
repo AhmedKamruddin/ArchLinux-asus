@@ -72,6 +72,7 @@ bluez-utils
 alsa-utils
 blender
 ntfs-3g
+gparted
 
 YAY:
 freetube-bin 
