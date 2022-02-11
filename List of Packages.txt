@@ -1,32 +1,31 @@
+INSTALLATION
 base
 base-devel
 linux  
 linux-firmware    
 vim  
-sudo  
 grub  
 edibootmgr  
 os-prober  
+amd-ucode
+sudo  
 networkmanager  
 wireless_tools  
 netctl  
-dialog  
+dialog
+********************************************
+POST INSTALLATION
 terminus-font  
 xorg  
 xorg-xinit  
-i3  
 archlinux-keyring  
 gnome  
-gnome-tweaks  
-gdm  
+gnome-tweaks
+i3
 firefox
 make  
 git  
-mpv  
-pulseaudio-bluetooth  
-bluez-utils  
-
-standardnotes-bin(yay)  
+yay
 
 amdgpu
   mesa
@@ -42,41 +41,54 @@ nvidiagpu:
   lib32-nvidia-470xx-utils
   lib32-opencl-nvidia-470xx
 
-asusctl:
+asus-linux:
   asusctl
   linux-g14
   linux-g14-headers
   supergfxctl
 
-linux-xanmod-rog (git)
-linux-xanmod-rog-headers (git)
+limux-xanmod-rog:
+	linux-xanmod-rog (git)
+	linux-xanmod-rog-headers (git)
 
-freetube-bin (git)
-bitwarden
-jdownloader2 (git)
-protonvpn (git)
+PACMAN:
 libreoffice
-visual-studio-code-bin
+mpv  
 torbrowser-launcher
+gnome-software-packagekit-plugin 
+bitwarden 
+gnucash 
+kdeconnect 
+libappindicator-gtk3 
+variety 
+ufw 
+qbittorrent 
+simplescreenrecorder 
+grub-customizer 
+alsa-utils 
+$(pacman -Ssq gnome-icon-theme) 
+mpv 
+bluez-utils 
+alsa-utils
+blender
+
+
+YAY:
+freetube-bin 
+jdownloader2 
+protonvpn 
+visual-studio-code-bin 
+zoom 
+standardnotes-bin
+unityhub
+touchegg
+
+SOFTWARE STORE:
 nextcloud (store)
-
-for software not working
-	gnome-software-packagekit-plugin
-
-gnucash
-kdeconnect
-ufw
-qbittorrent
-simplescreenrecorder
-grub-customizer
-zoom(git)
-variety
-
-for microphone not detected
-  alsa-utils
+  
   https://wiki.archlinux.org/title/PulseAudio/Troubleshooting#Microphone_not_detected_by_PulseAudio
 
-for linux native games
+for linux gaming:
   wine-staging
   alsa-plugins 
   cabextract 
@@ -110,18 +122,14 @@ for linux native games
   samba
   rum-bin (git)
 
-unityhub (git)
-blender
-lutris
 for steam
+  lutris
   ttf-liberation
   steam
-pacman -S $(pacman -Ssq gnome-icon-theme)
-touchegg (git)
-
-
+  wqy-zenhei
+  
 for appimages
-	fuse2
+  fuse2
 
 python
 spectacle
