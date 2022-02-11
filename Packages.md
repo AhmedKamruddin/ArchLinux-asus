@@ -1,3 +1,54 @@
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+# Installation
+
+- Verify the boot mode
+```
+ls /sys/firmware/efi/efivars
+```
+
+- Connect to the internet
+```
+ip a
+iwctl
+device list
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect <wifi name>
+exit
+ping archlinux.org
+```
+
+- Update the system clock
+```
+timedatectl set-ntp true
+timedatectl status
+```
+
+- Partition the disks
+```
+fdisk -l
+fdisk /dev/nvme0n1
+# t to change the filesystem
+# p to print the partitions
+# w to write changes to disk
+```
+  Root (linux filesystem): 50G  
+  Boot (EFI partition): 1G  
+  Home (linux filesystem): 450G  
+  Swap (swap): 20G  
+
+- Format the partitions
+```
+mkfs.ext4 /dev/root_partition
+mkfs.fat -F 32 /dev/efi_system_partition
+mkfs.ext4 /dev/home_partition
+mkswap /dev/swap_partition
+```
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+# Post-installation
+
 - Enable multilib  
 
       sudo vim /etc/pacman.conf  
@@ -5,8 +56,10 @@
 - Install yay  
 
       sudo pacman -Syu make git && cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
-<!--------------------------------------------------------------------------------------------------------------->
-# Install graphics drivers
+      
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+# Graphics drivers
 
 - ## Amd
 
@@ -17,7 +70,7 @@
       sudo pacman -Syu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook  
       
       
-     _Add to nvidia.hook_  
+     Add to nvidia.hook  
     
 
       [Trigger]  
@@ -39,7 +92,9 @@
 ---
 
     reboot
-<!--------------------------------------------------------------------------------------------------------------->
+    
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 # asus-linux  
 
 - Add g14 repository to pacman.conf
@@ -57,7 +112,9 @@ Server = https://arch.asus-linux.org
 ```
 sudo pacman -Syu asusctl linux-g14 linux-g14-headers supergfxctl && sudo systemctl enable --now power-profiles-daemon.service && sudo systemctl enable --now && grub-mkconfig -o /boot/grub/grub.cfg supergfxd 
 ```
-<!--------------------------------------------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 # linux-xanmod-rog
 
 - Edit makeflags variable to use parallel compilation
@@ -71,29 +128,40 @@ MAKEFLAGS="-j$(nproc)"
 - Install linux-xanmod-rog
 
       yay -S linux-xanmod-rog linux-xanmod-rog-headers && grub-mkconfig -o /boot/grub/grub.cfg
-<!--------------------------------------------------------------------------------------------------------------->
-# Install packages
+      
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-    sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils 
----
-
-    yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin
-
----
+# Software
+```
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils 
+```
+```
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin
+```
+#
 Create syslinks
-
-    sudo systemctl enable --now ufw && sudo systemctl enable --now bluetooth
-     
+```
+sudo systemctl enable --now ufw && sudo systemctl enable --now bluetooth
+```     
 
 #### Software store
 - Nextcloud
 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-# To run games on Linux
-    sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cabextract fluidsynth giflib gnutls gst-plugins-bad gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly jq lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-openal lib32-opencl-icd-loader lib32-sdl2 lib32-v4l-utils libgphoto2 libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt mono mpg123 openal opencl-icd-loader sdl2 v4l-utils winetricks wine-mono samba && yay -S dxvk-bin vkd3d-proton-bin rum-bin
+# Linux Gaming
+
+- johncena141's repacks requirements
+```
+sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cabextract fluidsynth giflib gnutls gst-plugins-bad gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly jq lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-openal lib32-opencl-icd-loader lib32-sdl2 lib32-v4l-utils libgphoto2 libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt mono mpg123 openal opencl-icd-loader sdl2 v4l-utils winetricks wine-mono samba && yay -S dxvk-bin vkd3d-proton-bin rum-bin
+```
+- Steam
+```
+sudo pacman -S lutris steam ttf-liberation wqy-zenhei
+```
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Blender and UnityHub
     sudo pacman -S blender && yay -S unityhub
 
-# Steam
-    sudo pacman -S lutris steam ttf-liberation wqy-zenhei
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
