@@ -115,10 +115,10 @@ MAKEFLAGS="-j$(nproc)"
 
 [List of packages](Packages.txt)  
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils blender ntfs-3g gparted
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils blender ntfs-3g gparted gnome-session-flashback
 ```
 ```
-yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin unityub chrome-gnome-shell touchegg
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin unityub chrome-gnome-shell touchegg i3-gnome
 ```
 #
 Create syslinks
