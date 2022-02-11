@@ -71,7 +71,7 @@ mpv
 bluez-utils 
 alsa-utils
 blender
-
+ntfs-3g
 
 YAY:
 freetube-bin 
