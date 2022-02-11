@@ -155,13 +155,12 @@ reboot
 # Post-installation
 
 ```
-sudo pacman -S terminus-font
-setfont ter-132n
+sudo pacman -Syu terminus-font && setfont ter-132n
 ```
 
 - Display server
 ```
-sudo pacman -Syu xorg xorg-xinit
+sudo pacman -S xorg xorg-xinit
 ```
 
 - Desktop environment
