@@ -1,6 +1,6 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 [Arch Installation](Installation.md)  
-[Software](https://github.com/AhmedKamruddin/My-Arch-Linux/blob/main/README.md#software)
+[Software](#software)
 
 # Post-installation
 
