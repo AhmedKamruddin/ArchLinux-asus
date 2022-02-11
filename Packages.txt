@@ -73,6 +73,7 @@ alsa-utils
 blender
 ntfs-3g
 gparted
+gnome-session-flashback
 
 YAY:
 freetube-bin 
@@ -83,6 +84,7 @@ zoom
 standardnotes-bin
 unityhub
 touchegg
+i3-gnome
 
 SOFTWARE STORE:
 nextcloud (store)
