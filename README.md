@@ -262,10 +262,10 @@ MAKEFLAGS="-j$(nproc)"
 
 # Software
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils blender
 ```
 ```
-yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin unityub touchegg
 ```
 #
 Create syslinks
@@ -288,9 +288,4 @@ sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cab
 ```
 sudo pacman -S lutris steam ttf-liberation wqy-zenhei
 ```
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-# Blender and UnityHub
-    sudo pacman -S blender && yay -S unityhub
-
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
