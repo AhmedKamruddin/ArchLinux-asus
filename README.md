@@ -165,7 +165,7 @@ sudo pacman -S xorg xorg-xinit
 
 - Desktop environment
 ```
-sudo pacman -S arhlinux-keyring gnome gnome-tweaks && sudo systemctl enable gdm
+sudo pacman -S archlinux-keyring gnome gnome-tweaks && sudo systemctl enable gdm
 ```
 
 - Window manager
