@@ -1,5 +1,6 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-[Installation](Installation.md)
+[Installation](Installation.md)  
+[List of packages](Packages.txt)  
 
 # Post-installation
 
