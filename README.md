@@ -145,7 +145,7 @@ pacman -S sudo networkmanager wireless_tools netctl dialog && systemctl enable -
 #If wifi can't be connected to after reboot: sudo nmcli device wifi connect <wifi> password <password>
 ```
 
-- Reboot
+---
 ```
 reboot
 ```
@@ -173,7 +173,7 @@ sudo pacman -S arhlinux-keyring gnome gnome-tweaks && sudo systemctl enable gdm
 sudo pacman -S i3
 ```
 
-- Reboot
+---
 ```
 reboot
 ```
