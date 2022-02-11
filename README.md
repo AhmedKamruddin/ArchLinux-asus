@@ -5,6 +5,10 @@
 ```
 ls /sys/firmware/efi/efivars
 ```
+- Change the font
+```
+setfont ter-132n
+```
 
 - Connect to the internet
 ```
@@ -14,7 +18,6 @@ device list
 station wlan0 scan
 station wlan0 get-networks
 station wlan0 connect <wifi name>
-exit
 ping archlinux.org
 ```
 
@@ -28,9 +31,9 @@ timedatectl status
 ```
 fdisk -l
 fdisk /dev/nvme0n1
-# t to change the filesystem
-# p to print the partitions
-# w to write changes to disk
+ t to change the filesystem
+ p to print the partitions
+ w to write changes to disk
 ```
   Root (linux filesystem): 50G  
   Boot (EFI partition): 1G  
@@ -45,17 +48,144 @@ mkfs.ext4 /dev/home_partition
 mkswap /dev/swap_partition
 ```
 
+- Mount the file systems
+```
+mount /dev/root_partition
+mkdir /mnt/boot
+mount /dev/efi_system_partition /mnt/boot
+mkdir /mnt/home
+mount /dev/home_partition /mnt/home
+swapon /dev/swap_partition
+
+df
+```
+
+- Install essential packages
+```
+pacstrap /mnt base base-devel linux linux-firmware
+```
+
+- Fstab
+```
+pacman -S vim
+
+genfstab -U /mnt>>/mnt/etc/fstab
+vi /mnt/etc/fstab
+```
+
+- Chroot
+```
+arch-chroot /mnt
+```
+
+- Time zone
+```
+ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+hwclocl --systohc
+```
+
+- Localization
+```
+vim /etc/locale.gen
+#uncomment en_US-UTF-8 UTF-8
+
+locale-gen
+
+vim /etc/locale.conf
+#add LANG=en_US.UTF-8
+```
+
+- Network configuration
+```
+vim /etc/hostname
+#add <hostname>
+
+vim /etc/hosts
+#add  127.0.0.1 localhost
+      ::1       localhost
+      127.0.1.1 <hostname>.localdomain  <hostname>
+```
+
+- Root password
+```
+passwd
+```
+
+- Add a user
+```
+useradd -g users -G wheel -m <username>
+passwd <username>
+EDITOR=vim visudo
+#uncomment wheel ALL=(ALL) ALL
+```
+- Boot loader
+```
+pacman -S grub efibootmgr os-prober
+grub-install --target=x86_64-efi --efi-directory=/boot/ --bootloader-id=GRUB
+
+mkdir /mnt2
+mount /dev/windows_efi_partition /mnt2
+
+vim /etc/default/grub
+#uncomment GRUB_DISABLE_OS_PROBER=false
+
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+- Microcode
+```
+pacman -S amd-ucode
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+- Install network packages
+```
+pacman -S sudo networkmanager wireless_tools netctl dialog && systemctl enable --now NetworkManager && systemctl enable --now bluetooth
+
+#If wifi can't be connected to after reboot: sudo nmcli device wifi connect <wifi> password <password>
+```
+
+- Reboot
+```
+reboot
+```
+
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Post-installation
+
+```
+sudo pacman -S terminus-font
+setfont ter-132n
+```
+
+- Display server
+```
+sudo pacman -Syu xorg xorg-xinit
+```
+
+- Desktop environment
+```
+sudo pacman -S arhlinux-keyring gnome gnome-tweaks && sudo systemctl enable gdm
+```
+
+- Window manager
+```
+sudo pacman -S i3
+```
+
+- Reboot
+```
+reboot
+```
 
 - Enable multilib  
 
       sudo vim /etc/pacman.conf  
 
-- Install yay  
+- Install firefox and yay  
 
-      sudo pacman -Syu make git && cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
+      sudo pacman -Syu firefox make git && cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
       
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -133,7 +263,7 @@ MAKEFLAGS="-j$(nproc)"
 
 # Software
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils 
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils
 ```
 ```
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin
@@ -141,7 +271,7 @@ yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardn
 #
 Create syslinks
 ```
-sudo systemctl enable --now ufw && sudo systemctl enable --now bluetooth
+sudo systemctl enable --now ufw
 ```     
 
 #### Software store
