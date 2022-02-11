@@ -73,7 +73,7 @@ alsa-utils
 blender
 ntfs-3g
 gparted
-gnome-session-flashback
+gnome-flashback
 
 YAY:
 freetube-bin 
