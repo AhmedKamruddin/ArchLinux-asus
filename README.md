@@ -1,7 +1,10 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-[Arch Installation](Arch-Installation.md)  
+My arch linux setup with compatibility for asus laptop features & gaming.  
 
-[Software](#software)
+Important links:  
+- [Arch Installation](Arch-Installation.md)  
+
+- [Software](#software)
 
 # Post-installation
 
