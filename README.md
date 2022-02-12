@@ -289,7 +289,7 @@ MAKEFLAGS="-j$(nproc)"
 sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect variety ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils blender ntfs-3g gparted dmenu
 ```
 ```
-yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin unityub chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin unityub chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git android-studio
 ```
 #
 Create syslinks
