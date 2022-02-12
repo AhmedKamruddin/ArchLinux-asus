@@ -70,7 +70,6 @@ $(pacman -Ssq gnome-icon-theme)
 mpv 
 bluez-utils 
 alsa-utils
-blender
 ntfs-3g
 gparted
 dmenu
@@ -82,11 +81,9 @@ protonvpn
 visual-studio-code-bin 
 zoom 
 standardnotes-bin
-unityhub
 touchegg
 i3-gnome
 gnome-shell-extension-pop-shell-git
-android-studio
 
 SOFTWARE STORE:
 nextcloud (store)
