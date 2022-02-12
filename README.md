@@ -209,25 +209,28 @@ reboot
       sudo pacman -Syu nvidia-dkms lib32-nvidia-utils && sudo mkdir /etc/pacman.d/hooks && sudo vim /etc/pacman.d/hooks/nvidia.hook  
       
       
-     Add to nvidia.hook  
+    - Add to nvidia.hook  
     
 
-      [Trigger]  
-      Operation=Install  
-      Operation=Upgrade  
-      Operation=Remove  
-      Type=Package  
-      Target=nvidia-dkms  
-      Target=linux-xanmod-rog  
-      #Change the linux part above and in the Exec line if a different kernel is used  
+          [Trigger]  
+          Operation=Install  
+          Operation=Upgrade  
+          Operation=Remove  
+          Type=Package  
+          Target=nvidia-dkms  
+          Target=linux-xanmod-rog  
+          #Change the linux part above and in the Exec line if a different kernel is used  
 
-      [Action]  
-      Description=Update Nvidia module in initcpio  
-      Depends=mkinitcpio  
-      When=PostTransaction  
-      NeedsTargets  
-      Exec=/bin/sh -c 'while read -r trg; do case $trg in linux-xanmod-rog) exit 0; esac; done; /usr/bin/mkinitcpio -P'              
-
+          [Action]  
+          Description=Update Nvidia module in initcpio  
+          Depends=mkinitcpio  
+          When=PostTransaction  
+          NeedsTargets  
+          Exec=/bin/sh -c 'while read -r trg; do case $trg in linux-xanmod-rog) exit 0; esac; done; /usr/bin/mkinitcpio -P'              
+    - Reduce power usage
+      
+          sudo vim /etc/modprobe.d/nvidia.conf
+          #add options nvidia "NVreg_DynamicPowerManagement=0x02"
 ---
 
     reboot
