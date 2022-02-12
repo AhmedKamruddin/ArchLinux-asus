@@ -251,6 +251,15 @@ Server = https://arch.asus-linux.org
 ```
 sudo pacman -Syu asusctl linux-g14 linux-g14-headers supergfxctl && sudo systemctl enable --now power-profiles-daemon.service && sudo systemctl enable --now && grub-mkconfig -o /boot/grub/grub.cfg supergfxd 
 ```
+#
+- Custom fan curves
+```
+sudo mv /etc/asusd/profile.conf /etc/asusd/profile.conf.old
+asusctl fan-curve -m Performance -e true
+asusctl fan-curve -m Performance -D 30c:0,40c:90,50c:150,60c:255,70c:255,80c:255,90c:255,100c:255 -e true -f cpu
+asusctl fan-curve -m Performance -D 30c:0,40c:90,50c:150,60c:255,70c:255,80c:255,90c:255,100c:255 -e true -f gpu
+sudo rm /etc/asusd/profile.conf.old
+```
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
