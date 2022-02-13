@@ -31,6 +31,7 @@ ping archlinux.org
 ```
 timedatectl set-ntp true
 timedatectl status
+timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
 - Partition the disks
