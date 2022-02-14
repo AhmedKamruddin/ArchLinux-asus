@@ -73,6 +73,11 @@ alsa-utils
 ntfs-3g
 gparted
 dmenu
+java8-openjfx 
+jdk8-openjdk 
+jre8-openjdk 
+jre8-openjdk-headless
+
 
 YAY:
 freetube-bin 
