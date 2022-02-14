@@ -313,6 +313,10 @@ sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cab
 ```
 sudo pacman -S lutris steam ttf-liberation wqy-zenhei
 ```
+- Minecraft (TLauncher)
+```
+sudo pacman -S java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless
+```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Extensions
