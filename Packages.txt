@@ -146,6 +146,7 @@ for gns3
   vpcs(git)
   wireshark-qt
   xterm
+  putty
 
 python
 spectacle
