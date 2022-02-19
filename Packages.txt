@@ -134,18 +134,7 @@ for steam
   ttf-liberation
   steam
   wqy-zenhei
-  
-for appimages
-  fuse2
-
-python
-spectacle
-droidcam
-net-tools
-dnsutils
-traceroute
-gimp
-
+ 
 for gns3
   gns3-gui(git)
   gns3-server(git)
@@ -156,7 +145,19 @@ for gns3
   qemu
   vpcs(git)
   wireshark-qt
+  xterm
 
+python
+spectacle
+droidcam
+net-tools
+dnsutils
+traceroute
+gimp
+
+
+for appimages
+  fuse2
 
 ==> WARNING: Possibly missing firmware for module: qla2xxx
 ==> WARNING: Possibly missing firmware for module: wd719x
