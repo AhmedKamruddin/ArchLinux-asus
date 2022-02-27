@@ -147,11 +147,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 - Install network packages
 ```
-pacman -S sudo networkmanager wireless_tools netctl dialog && systemctl enable --now NetworkManager && systemctl enable --now bluetooth
+pacman -S sudo networkmanager wireless_tools netctl dialog dhclient && systemctl enable --now NetworkManager && systemctl enable --now bluetooth
 
 #If wifi can't be connected to after reboot: sudo nmcli device wifi connect <wifi> password <password>
 
-sudo vim /etc/NetworkManager/conf.d/dhcp.conf
+sudo vim /etc/NetworkManager/conf.d/dhcp-client.conf
 #add [main]
      dhcp=dhclient
 ```
