@@ -133,7 +133,7 @@ for linux gaming:
 
 for steam
   lutris
-  ttf-liberation
+  ttf-ms-win10-auto
   steam
   wqy-zenhei
  
