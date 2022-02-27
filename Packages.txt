@@ -13,6 +13,7 @@ networkmanager
 wireless_tools  
 netctl  
 dialog
+dhclient
 ********************************************
 POST INSTALLATION
 terminus-font  
