@@ -311,7 +311,7 @@ sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cab
 ```
 - Steam
 ```
-sudo pacman -S lutris steam ttf-liberation wqy-zenhei
+sudo pacman -S lutris steam ttf-ms-win10-auto wqy-zenhei
 ```
 - Minecraft (TLauncher)
 ```
