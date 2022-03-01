@@ -189,7 +189,7 @@ sudo pacman -S i3
 reboot
 ```
 
-- Enable multilib  
+- Enable multilib and parallel downloads  
 
       sudo vim /etc/pacman.conf  
 
