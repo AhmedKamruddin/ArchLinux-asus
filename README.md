@@ -332,3 +332,4 @@ https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/
 https://extensions.gnome.org/extension/307/dash-to-dock/  
 https://extensions.gnome.org/extension/4033/x11-gestures/  
 https://extensions.gnome.org/extension/277/impatience/
+https://extensions.gnome.org/extension/545/hide-top-bar/
