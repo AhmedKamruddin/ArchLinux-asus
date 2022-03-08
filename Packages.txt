@@ -61,7 +61,6 @@ bitwarden
 gnucash 
 kdeconnect 
 libappindicator-gtk3 
-variety 
 ufw 
 qbittorrent 
 simplescreenrecorder 
