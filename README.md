@@ -196,7 +196,19 @@ reboot
 - Install firefox and yay  
 
       sudo pacman -Syu firefox make git && cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
-      
+
+- Script to change refresh rate  
+
+      xrandr | grep -q "143.98\*"
+      x=`echo $?`
+      if [ $x -eq 0 ]
+      then
+       xrandr -r 60
+      else
+       xrandr -r 144
+      fi
+
+
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Graphics drivers
