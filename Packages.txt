@@ -78,6 +78,7 @@ jdk8-openjdk
 jre8-openjdk 
 jre8-openjdk-headless
 octave
+dia
 
 
 YAY:
