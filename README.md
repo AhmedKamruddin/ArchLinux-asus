@@ -331,6 +331,24 @@ sudo pacman -S java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless
 ```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+# i3 Window Manager
+
+- Enable Natural Scrolling for touchpad
+```
+sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf 
+```
+```
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+	Option "NaturalScrolling" "True"
+EndSection
+```
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 # Extensions
 https://extensions.gnome.org/extension/615/appindicator-support/  
 https://extensions.gnome.org/extension/779/clipboard-indicator/  
