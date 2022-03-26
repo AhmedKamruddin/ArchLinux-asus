@@ -1,7 +1,9 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 My arch linux setup for asus laptop features and gaming.
 
-Jump to [Software](#software)  
+Jump to :  
+- [Software](#software)  
+- [i3 Window Manager](#i3wm)
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -331,7 +333,7 @@ sudo pacman -S java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless
 ```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-# i3 Window Manager
+# i3wm
 
 - Enable Natural Scrolling for touchpad
 ```
@@ -345,6 +347,15 @@ Section "InputClass"
         Driver "libinput"
 	Option "NaturalScrolling" "True"
 EndSection
+```
+
+- config file
+```
+ vim ~/.config/i3/config
+```
+```
+# kill focused window
+bindsym $mod+q kill
 ```
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
