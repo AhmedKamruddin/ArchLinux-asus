@@ -67,7 +67,7 @@ simplescreenrecorder
 grub-customizer 
 alsa-utils 
 $(pacman -Ssq gnome-icon-theme) 
-mpv 
+vlc  
 bluez-utils 
 alsa-utils
 ntfs-3g
@@ -130,6 +130,7 @@ for linux gaming:
   wine-mono
   samba
   rum-bin (git)
+  zpaq (git)
 
 for steam
   lutris
