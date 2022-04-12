@@ -301,7 +301,7 @@ MAKEFLAGS="-j$(nproc)"
 
 [List of packages](Packages.txt)  
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) mpv bluez-utils alsa-utils ntfs-3g gparted dmenu libvirt dnsmasq qemu wireshark-qt xterm putty octave dia alacritty feh gdb
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted dmenu libvirt dnsmasq qemu wireshark-qt xterm putty octave dia alacritty feh gdb
 ```
 ```
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git gns3-gui gns3-server dynamips ubridge vpcs
@@ -321,7 +321,7 @@ sudo systemctl enable --now ufw && ufw enable && sudo systemctl eenable --now to
 
 - johncena141's repacks requirements
 ```
-sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cabextract fluidsynth giflib gnutls gst-plugins-bad gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly jq lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-openal lib32-opencl-icd-loader lib32-sdl2 lib32-v4l-utils libgphoto2 libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt mono mpg123 openal opencl-icd-loader sdl2 v4l-utils winetricks wine-mono samba && yay -S dxvk-bin vkd3d-proton-bin rum-bin
+sudo pacman -S wine-staging && sudo pacman -S --needed alsa-lib alsa-plugins cabextract fluidsynth giflib gnutls gst-plugins-bad gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly jq lib32-alsa-lib lib32-alsa-plugins lib32-giflib lib32-gnutls lib32-gst-plugins-base-libs lib32-libjpeg-turbo lib32-libldap lib32-libpng lib32-libpulse lib32-libxcomposite lib32-libxinerama lib32-libxslt lib32-mpg123 lib32-openal lib32-opencl-icd-loader lib32-sdl2 lib32-v4l-utils libgphoto2 libjpeg-turbo libldap libpng libpulse libxcomposite libxinerama libxslt mono mpg123 openal opencl-icd-loader sdl2 v4l-utils winetricks wine-mono samba && yay -S dxvk-bin vkd3d-proton-bin rum-bin zpaq
 ```
 - Steam
 ```
