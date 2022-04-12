@@ -327,10 +327,6 @@ sudo pacman -S --needed giflib gnutls gst-plugins-bad gst-plugins-base gst-plugi
 ```
 sudo pacman -S lutris steam ttf-ms-win10-auto wqy-zenhei
 ```
-- Minecraft (TLauncher)
-```
-sudo pacman -S java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless
-```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # i3wm
@@ -364,7 +360,6 @@ bindsym $mod+q kill
 https://extensions.gnome.org/extension/615/appindicator-support/  
 https://extensions.gnome.org/extension/779/clipboard-indicator/  
 https://extensions.gnome.org/extension/906/sound-output-device-chooser/  
-https://extensions.gnome.org/extension/1112/screenshot-tool/  
 https://extensions.gnome.org/extension/4099/no-overview/  
 https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/  
 https://extensions.gnome.org/extension/4320/asusctl-gex/  
