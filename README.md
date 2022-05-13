@@ -306,10 +306,13 @@ sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugi
 ```
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git gns3-gui gns3-server dynamips ubridge vpcs
 ```
+```
+sudo pip install tk nltk
+```
 #
 Create syslinks
 ```
-sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now touchegg && systemctl enable --now libvirtd.service && systemctl start mariadb $$ systemctl start httpd
+sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now touchegg && systemctl enable --now libvirtd.service
 ```     
 
 #### Software store
