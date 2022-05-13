@@ -307,7 +307,7 @@ sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugi
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git gns3-gui gns3-server dynamips ubridge vpcs
 ```
 ```
-sudo pip install tk nltk
+sudo pip install tk nltk pandas
 ```
 #
 Create syslinks
