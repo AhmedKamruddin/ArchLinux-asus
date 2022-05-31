@@ -328,7 +328,7 @@ sudo pacman -S --needed giflib gnutls gst-plugins-bad gst-plugins-base gst-plugi
 ```
 - Steam
 ```
-sudo pacman -S lutris steam ttf-ms-win10-auto wqy-zenhei
+sudo pacman -S lutris steam ttf-ms-win11-auto wqy-zenhei
 ```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
