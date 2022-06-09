@@ -314,6 +314,11 @@ Create syslinks
 ```
 sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now touchegg
 ```     
+#
+Allow kdeconnect through firewall
+```
+sudo ufw allow 1714:1764/udp && sudo ufw allow 1714:1764/tcp && sudo ufw allow 1714:1764/udp
+```     
 
 #### Software store
 - Nextcloud
