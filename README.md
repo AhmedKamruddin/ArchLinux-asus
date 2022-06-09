@@ -317,7 +317,7 @@ sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now tou
 #
 Allow kdeconnect through firewall
 ```
-sudo ufw allow 1714:1764/udp && sudo ufw allow 1714:1764/tcp && sudo ufw allow 1714:1764/udp
+sudo ufw allow 1714:1764/udp && sudo ufw allow 1714:1764/tcp && sudo ufw reload
 ```     
 
 #### Software store
