@@ -301,10 +301,10 @@ MAKEFLAGS="-j$(nproc)"
 
 [List of packages](Packages.txt)  
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted dmenu wireshark-qt xterm putty octave dia alacritty gdb virt-manager qemu libvirt edk2-ovmf dnsmasq iptables-nft pavucontrol pinta tk pip gprolog paprefs
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted octave alacritty gdb pavucontrol pinta pip
 ```
 ```
-yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg i3-gnome gnome-shell-extension-pop-shell-git gns3-gui gns3-server dynamips ubridge vpcs lightworks
+yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg gnome-shell-extension-pop-shell-git xampp
 ```
 ```
 sudo pip install tk nltk pandas
@@ -312,7 +312,7 @@ sudo pip install tk nltk pandas
 #
 Create syslinks
 ```
-sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now touchegg && systemctl enable --now libvirtd.service
+sudo systemctl enable --now ufw && ufw enable && sudo systemctl enable --now touchegg
 ```     
 
 #### Software store
@@ -332,33 +332,6 @@ sudo pacman -S lutris steam ttf-ms-win11-auto wqy-zenhei
 ```
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-# i3wm
-
-- Enable Natural Scrolling for touchpad
-```
-sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf 
-```
-```
-Section "InputClass"
-        Identifier "libinput touchpad catchall"
-        MatchIsTouchpad "on"
-        MatchDevicePath "/dev/input/event*"
-        Driver "libinput"
-	Option "NaturalScrolling" "True"
-EndSection
-```
-
-- config file
-```
- vim ~/.config/i3/config
-```
-```
-# kill focused window
-bindsym $mod+q kill
-```
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 # Extensions
 https://extensions.gnome.org/extension/615/appindicator-support/  
 https://extensions.gnome.org/extension/779/clipboard-indicator/  
@@ -367,10 +340,7 @@ https://extensions.gnome.org/extension/4099/no-overview/
 https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/  
 https://extensions.gnome.org/extension/4320/asusctl-gex/  
 https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/  
-https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/  
-https://extensions.gnome.org/extension/307/dash-to-dock/  
 https://extensions.gnome.org/extension/4033/x11-gestures/  
-https://extensions.gnome.org/extension/277/impatience/
 https://extensions.gnome.org/extension/545/hide-top-bar/  
 https://extensions.gnome.org/extension/517/caffeine/  
 https://extensions.gnome.org/extension/904/disconnect-wifi/    
