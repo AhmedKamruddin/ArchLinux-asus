@@ -3,7 +3,6 @@ My arch linux setup for asus laptop features and gaming.
 
 Jump to :  
 - [Software](#software)  
-- [i3 Window Manager](#i3wm)
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
