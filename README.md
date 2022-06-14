@@ -350,4 +350,5 @@ https://extensions.gnome.org/extension/517/caffeine/
 https://extensions.gnome.org/extension/904/disconnect-wifi/    
 https://extensions.gnome.org/extension/1460/vitals/      
 https://extensions.gnome.org/extension/5004/dash-to-dock-for-cosmic/  
-https://extensions.gnome.org/extension/1319/gsconnect/
+https://extensions.gnome.org/extension/1319/gsconnect/  
+https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/
