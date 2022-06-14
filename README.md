@@ -1,5 +1,5 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-My arch linux setup for asus laptop features and gaming.
+My arch linux setup for asus laptop and gaming.
 
 Jump to :  
 - [Software](#software)  
