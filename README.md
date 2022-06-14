@@ -300,7 +300,7 @@ MAKEFLAGS="-j$(nproc)"
 
 [List of packages](Packages.txt)  
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash kdeconnect ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted octave alacritty gdb pavucontrol pinta pip
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted octave alacritty gdb pavucontrol pinta pip
 ```
 ```
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg gnome-shell-extension-pop-shell-git xampp aic94xx-firmware wd719x-firmware upd72020x-fw qlogic
@@ -349,4 +349,5 @@ https://extensions.gnome.org/extension/545/hide-top-bar/
 https://extensions.gnome.org/extension/517/caffeine/  
 https://extensions.gnome.org/extension/904/disconnect-wifi/    
 https://extensions.gnome.org/extension/1460/vitals/      
-https://extensions.gnome.org/extension/5004/dash-to-dock-for-cosmic/
+https://extensions.gnome.org/extension/5004/dash-to-dock-for-cosmic/  
+https://extensions.gnome.org/extension/1319/gsconnect/
