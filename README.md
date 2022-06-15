@@ -300,7 +300,7 @@ MAKEFLAGS="-j$(nproc)"
 
 [List of packages](Packages.txt)  
 ```
-sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted octave alacritty gdb pavucontrol pinta pip openssh xterm
+sudo pacman -Syu libreoffice torbrowser-launcher gnome-software-packagekit-plugin bitwarden gnucash kdeconnect libappindicator-gtk3 gnucash ufw qbittorrent simplescreenrecorder grub-customizer alsa-utils $(pacman -Ssq gnome-icon-theme) vlc bluez-utils alsa-utils ntfs-3g gparted octave alacritty gdb pavucontrol pinta pip openssh xterm gtk-engine-murrine
 ```
 ```
 yay -S freetube-bin jdownloader2 protonvpn visual-studio-code-bin zoom standardnotes-bin chrome-gnome-shell touchegg gnome-shell-extension-pop-shell-git xampp aic94xx-firmware wd719x-firmware upd72020x-fw qlogic
