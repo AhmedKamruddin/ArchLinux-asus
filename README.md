@@ -353,4 +353,5 @@ https://extensions.gnome.org/extension/5004/dash-to-dock-for-cosmic/
 https://extensions.gnome.org/extension/1319/gsconnect/  
 https://extensions.gnome.org/extension/352/middle-click-to-close-in-overview/  
 https://extensions.gnome.org/extension/3100/maximize-to-empty-workspace/  
-https://extensions.gnome.org/extension/1287/unite/
+https://extensions.gnome.org/extension/1287/unite/  
+https://extensions.gnome.org/extension/4548/tactile/
