@@ -58,7 +58,7 @@ mkswap /dev/swap_partition
 
 - Mount the file systems
 ```
-mount /dev/root_partition
+mount /dev/root_partition /mnt
 mkdir /mnt/boot
 mount /dev/efi_system_partition /mnt/boot
 mkdir /mnt/home
