@@ -1,10 +1,4 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
-My arch linux setup for asus laptop and gaming.
-
-Jump to :  
-- [Software](#software)  
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 # Installation
 
@@ -43,15 +37,14 @@ fdisk /dev/nvme0n1
  p to print the partitions
  w to write changes to disk
 ```
+  Boot (EFI partition): 512M  
   Root (linux filesystem): 50G  
-  Boot (EFI partition): 1G  
-  Home (linux filesystem): 450G  
-  Swap (swap): 20G  
+  Home (linux filesystem): 220G  
 
 - Format the partitions
 ```
-mkfs.ext4 /dev/root_partition
 mkfs.fat -F 32 /dev/efi_system_partition
+mkfs.ext4 /dev/root_partition
 mkfs.ext4 /dev/home_partition
 mkswap /dev/swap_partition
 ```
@@ -59,18 +52,27 @@ mkswap /dev/swap_partition
 - Mount the file systems
 ```
 mount /dev/root_partition /mnt
-mkdir /mnt/boot
-mount /dev/efi_system_partition /mnt/boot
-mkdir /mnt/home
-mount /dev/home_partition /mnt/home
+mount --mkdir /dev/efi_system_partition /mnt/boot
+mount --mkdir /dev/home_partition /mnt/home
 swapon /dev/swap_partition
 
 df
 ```
+- Add g14 repository to pacman.conf
 
+```
+sudo vim /etc/pacman.conf
+```
+```
+[g14]  
+SigLevel = DatabaseNever Optional TrustAll  
+Server = https://arch.asus-linux.org  
+```
+- Enable parallel downloads  
+ParallelDownloads under [options] needs to be set to a positive integer in /etc/pacman.conf
 - Install essential packages
 ```
-pacstrap /mnt base base-devel linux linux-firmware
+pacstrap /mnt base base-devel linux-g14 linux-g14-headers linux-firmware vim
 ```
 
 - Fstab
@@ -253,16 +255,7 @@ reboot
 
 # asus-linux  
 
-- Add g14 repository to pacman.conf
 
-```
-sudo vim /etc/pacman.conf
-```
-```
-[g14]  
-SigLevel = DatabaseNever Optional TrustAll  
-Server = https://arch.asus-linux.org  
-```
 #
  - Install asus packages
 ```
