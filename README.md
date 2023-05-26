@@ -224,6 +224,7 @@ sudo pacman -Rsu xdg-user-dirs
 - Sound system
 ```
 sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa
+sudo systemctl --user enable --now pipewire && sudo systemctl --user enable --now wireplumber
 ```
 
 - Setup firewall
