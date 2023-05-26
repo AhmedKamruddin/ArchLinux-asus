@@ -179,16 +179,31 @@ sudo pacman -S nvidia-dkms xf86-video-gpu
 ```
 - Window manager
 ```
-sudo pacman -S bspwm sxhkd picom lxsession
+sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty
 ```
-- Configure bspwm
+- Configure window manager
+```
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+```
+Replace the last few lines in xinitrc with
+```
+setxkbmap us &
+picom &
+exec bspwm
+```
 ```
 mkdir .config
 mkdir .config/bspwm
 mkdir .config/sxhkd
-cp
+cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd/
 ```
-
+Enable touchpad tap-to-click, natural scrolling
+```
+sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
+#
+sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+```
 
 
 - Desktop environment
