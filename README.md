@@ -179,7 +179,9 @@ sudo pacman -S nvidia-dkms xf86-video-gpu
 ```
 - Window manager
 ```
-sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty
+sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty ntfs-3g git
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
+yay -S freetube
 ```
 - Configure window manager
 ```
@@ -198,7 +200,7 @@ mkdir .config/sxhkd
 cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm/
 cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd/
 ```
-Change touchpad tap-to-click, natural scrolling
+Change touchpad options
 ```
 sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
 ----------------------------------------------
