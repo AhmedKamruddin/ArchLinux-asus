@@ -77,10 +77,8 @@ pacstrap /mnt base base-devel linux-g14 linux-g14-headers linux-firmware vim
 
 - Fstab
 ```
-pacman -S vim
-
 genfstab -U /mnt>>/mnt/etc/fstab
-vi /mnt/etc/fstab
+cat /mnt/etc/fstab
 ```
 
 - Chroot
@@ -91,7 +89,7 @@ arch-chroot /mnt
 - Time zone
 ```
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-hwclocl --systohc
+hwclock --systohc
 ```
 
 - Localization
@@ -108,7 +106,7 @@ vim /etc/locale.conf
 - Network configuration
 ```
 vim /etc/hostname
-#add <hostname>
+#add arch
 
 vim /etc/hosts
 #add  127.0.0.1 localhost
@@ -133,9 +131,6 @@ EDITOR=vim visudo
 pacman -S grub efibootmgr os-prober
 grub-install --target=x86_64-efi --efi-directory=/boot/ --bootloader-id=GRUB
 
-mkdir /mnt2
-mount /dev/windows_efi_partition /mnt2
-
 vim /etc/default/grub
 #uncomment GRUB_DISABLE_OS_PROBER=false
 
@@ -150,7 +145,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 - Install network packages
 ```
-pacman -S sudo networkmanager wireless_tools netctl dialog dhclient && systemctl enable --now NetworkManager && systemctl enable --now bluetooth
+pacman -S networkmanager wireless_tools netctl dialog dhclient && systemctl enable --now NetworkManager && systemctl enable --now bluetooth
 
 #If wifi can't be connected to after reboot: sudo nmcli device wifi connect <wifi> password <password>
 
@@ -161,6 +156,8 @@ sudo vim /etc/NetworkManager/conf.d/dhcp-client.conf
 
 ---
 ```
+exit
+umount -a
 reboot
 ```
 
@@ -171,11 +168,28 @@ reboot
 ```
 sudo pacman -Syu terminus-font && setfont ter-132n
 ```
-
 - Display server
 ```
 sudo pacman -S xorg xorg-xinit
 ```
+- Display driver
+```
+sudo pacman -S nvidia-dkms xf86-video-gpu
+
+```
+- Window manager
+```
+sudo pacman -S bspwm sxhkd picom lxsession
+```
+- Configure bspwm
+```
+mkdir .config
+mkdir .config/bspwm
+mkdir .config/sxhkd
+cp
+```
+
+
 
 - Desktop environment
 ```
