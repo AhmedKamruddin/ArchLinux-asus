@@ -198,11 +198,17 @@ mkdir .config/sxhkd
 cp /usr/share/doc/bspwm/examples/bspwmrc .config/bspwm/
 cp /usr/share/doc/bspwm/examples/sxhkdrc .config/sxhkd/
 ```
-Enable touchpad tap-to-click, natural scrolling
+Change touchpad tap-to-click, natural scrolling
 ```
-sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
-#
 sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+----------------------------------------------
+Section "InputClass"
+	Identifier "devname"
+	Driver "libinput"
+	Option "Tapping" "on"
+	Option "ClickMethod" "clickfinger"
+	Option "NaturalScrolling" "true"
+EndSection
 ```
 
 
