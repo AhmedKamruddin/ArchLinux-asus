@@ -179,17 +179,18 @@ sudo pacman -S nvidia-dkms xf86-video-gpu
 ```
 - Window manager
 ```
-sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty ntfs-3g git
+sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty ntfs-3g git nitrogen
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
 yay -S freetube
 ```
-- Configure window manager
+## Configure window manager
 ```
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 ```
 Replace the last few lines in xinitrc with
 ```
 setxkbmap us &
+nitrogen --restore &
 picom &
 exec bspwm
 ```
@@ -213,7 +214,19 @@ Section "InputClass"
 EndSection
 ```
 
+- User directories
+```
+sudo pacman -S xdg-user-dirs
+xdg-user-dirs update
+sudo pacman -Rsu xdg-user-dirs
+```
 
+- Sound system
+```
+sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa
+```
+
+- Setup firewall
 - Desktop environment
 ```
 sudo pacman -S archlinux-keyring gnome gnome-tweaks && sudo systemctl enable gdm
