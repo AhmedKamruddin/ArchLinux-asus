@@ -179,7 +179,7 @@ sudo pacman -S nvidia-dkms xf86-video-gpu
 ```
 - Window manager
 ```
-sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty ntfs-3g git nitrogen
+sudo pacman -S bspwm sxhkd picom lxsession firefox dmenu alacritty ntfs-3g git nitrogen 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ../ && rm -rf yay
 yay -S freetube
 ```
@@ -223,7 +223,7 @@ sudo pacman -Rsu xdg-user-dirs
 
 - Sound system
 ```
-sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse
+sudo pacman -S pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse pavucontrol rofi networkanager-dmenu-gite
 systemctl --user enable --now pipewire.socket && systemctl --user enable --now wireplumber.socket && systemctl --user enable --now pipewire-pulse.socket
 ```
 
